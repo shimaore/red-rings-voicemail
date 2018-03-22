@@ -1,0 +1,28 @@
+{
+  "name": "red-rings-voicemail-settings",
+  "version": "1.0.0",
+  "description": "red-rings CouchDB backend for voicemail settings",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/shimaore/red-rings-voicemail-settings"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "dependencies": {
+    "abrasive-ducks-transducers": "^2.0.0",
+    "immutable": "^4.0.0-rc.9",
+    "most": "^1.7.3",
+    "red-rings": "^1.1.4",
+    "red-rings-couchdb": "^3.2.0",
+    "well-groomed-feast-view": "^1.0.0"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.2.3"
+  }
+}
