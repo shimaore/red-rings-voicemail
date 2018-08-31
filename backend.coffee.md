@@ -45,10 +45,10 @@ Subscribe to invidivual document
         the_db = couchdb_backend url.toString(), msg_view, fromJS
         the_db most.just msg
         .recoverWith (error) ->
-          console.log 'Stream failed', error
+          console.error 'Stream failed', error
           couchdb_backend url.toString(), null, fromJS
         .recoverWith (error) ->
-          console.log 'Stream failed again', error
+          console.error 'Stream failed again', error
           most.empty()
 
 The timer should probably be shorter and/or extensible (so that we can cache those instances in an LRU and reuse them).
