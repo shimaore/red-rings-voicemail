@@ -71,6 +71,8 @@ On the return stream (i.e. in NOTIFY events sent in response to SUBSCRIBE), inje
 Notice that huge-play uses `music.wav` and `ringback.wav` as default for backward compatibility, but we do not support uploading those unless they are already present (in other words setting `custom_music` and `custom_ringback` in local-numbers to `true`).
 
         .map (msg) ->
+          unless msg.had 'doc'
+            return msg
           msg = msg.updateIn ['doc','_attachments'], default_Map
           for file in [ 'music.mp3', 'ringback.mp3', 'prompt.mp3', 'name.mp3' ]
             msg = msg.updateIn ['doc','_attachments',file], default_Map
