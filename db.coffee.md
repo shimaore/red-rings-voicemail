@@ -21,11 +21,14 @@ are always used for the same URL (which is not true, generally speaking).
 
     backend = (url,view,reviver) ->
       if cache.has url
-        cache.get url
+        db = cache.get url
       else
         db = couchdb_backend url, view, reviver
         cache.set url, db
-        db.until most.fromEvent url, ev
+
+      (source) ->
+        db source
+        .until most.fromEvent url, ev
 
 Voicemail-database cache
 ========================
