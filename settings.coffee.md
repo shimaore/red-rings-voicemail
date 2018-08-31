@@ -47,15 +47,20 @@ No match (will get filtered out)
 
 Translate key/id back to the request format (see last `map` down).
 
-        tr = (v) ->
+        id_tr = (v) ->
           switch
             when v? and v is 'voicemail_settings'
               "voicemail-settings:#{name}"
             else
-              console.error "Unexpected id/key in response to #{name}", v
               v
 
-        id_tr = key_tr = tr
+        key_tr = (v) ->
+          switch
+            when v? and v is 'voicemail_settings'
+              "voicemail-settings:#{name}"
+            else
+              console.error "Unexpected key in response to #{name}", v
+              v
 
 Send to the backend processor.
 
