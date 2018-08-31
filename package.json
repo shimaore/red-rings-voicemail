@@ -18,12 +18,10 @@
   "dependencies": {
     "abrasive-ducks-transducers": "^2.1.2",
     "ccnq4-kitty": "^1.0.2",
-    "eventemitter2": "^5.0.1",
     "immutable": "^4.0.0-rc.9",
-    "lru-cache": "^4.1.3",
     "most": "^1.7.3",
     "red-rings": "^2.0.0",
-    "red-rings-couchdb": "^3.4.0"
+    "red-rings-couchdb": "^3.5.0"
   },
   "devDependencies": {
     "coffeescript": "^2.2.3",
