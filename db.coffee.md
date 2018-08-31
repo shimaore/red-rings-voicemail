@@ -1,7 +1,8 @@
 Voicemail-database cache
 ========================
 
+    couchdb_backend = require 'red-rings-couchdb/backend'
     fromJS = require './from-js'
 
     module.exports = (url) ->
-      backend url, null, fromJS, true
+      couchdb_backend url, null, fromJS, true
