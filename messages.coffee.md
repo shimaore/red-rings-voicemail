@@ -60,7 +60,7 @@ No match (will get filtered out)
               "voicemail:#{name}:#{$[1]}"
 
             else
-              console.error "Unexpected id in response to #{name}", id
+              debug "Unexpected id in response to #{name}", id
               id
 
         key_tr = (key) ->
@@ -73,7 +73,7 @@ No match (will get filtered out)
               "voicemail:#{name}"
 
             else
-              console.error "Unexpected key in response to #{name}", key
+              debug "Unexpected key in response to #{name}", key
               key
 
         the_db = couchdb_backend url.toString()
@@ -94,4 +94,5 @@ Re-inject any missing field
     Immutable = require 'immutable'
     {operation} = require 'abrasive-ducks-transducers'
     {NOTIFY,UPDATE,SUBSCRIBE} = require 'red-rings/operations'
+    {debug} = (require 'tangible') 'red-rings-voicemail:messages'
     {URL} = require 'url'
