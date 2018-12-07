@@ -66,7 +66,7 @@ No match (will get filtered out)
         key_tr = (key) ->
           switch
             # single document
-            when 'string' is typeof key
+            when 'string' is typeof key and $ = id?.match /^voicemail:(.+)$/
               "voicemail:#{name}#{$[1]}"
             # min/max view
             when Immutable.Map.isMap(key) and key.has 'min'
