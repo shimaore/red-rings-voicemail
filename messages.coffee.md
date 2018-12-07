@@ -90,6 +90,7 @@ Re-inject any missing field
     module.exports = voicemail_messages
     couchdb_backend = require './db'
     most = require 'most'
+    ec = encodeURIComponent
     Immutable = require 'immutable'
     {operation} = require 'abrasive-ducks-transducers'
     {NOTIFY,UPDATE,SUBSCRIBE} = require 'red-rings/operations'
