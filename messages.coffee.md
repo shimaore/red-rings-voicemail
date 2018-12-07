@@ -67,7 +67,7 @@ No match (will get filtered out)
           switch
             # single document
             when 'string' is typeof key and $ = key.match /^voicemail:(.+)$/
-              "voicemail:#{name}#{$[1]}"
+              "voicemail:#{name}:#{$[1]}"
             # min/max view
             when Immutable.Map.isMap(key) and key.has 'min'
               "voicemail:#{name}"
