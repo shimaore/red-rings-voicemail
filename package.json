@@ -17,11 +17,11 @@
   "license": "Unlicense",
   "dependencies": {
     "abrasive-ducks-transducers": "^2.1.2",
-    "ccnq4-kitty": "^1.0.2",
-    "immutable": "^4.0.0-rc.9",
+    "ccnq4-kitty": "^1.1.0",
+    "immutable": "^4.0.0-rc.12",
     "most": "^1.7.3",
     "red-rings": "^2.0.0",
-    "red-rings-couchdb": "^3.5.2",
+    "red-rings-couchdb": "^3.7.0",
     "tangible": "^3.0.0"
   },
   "devDependencies": {
