@@ -21,7 +21,7 @@
     "immutable": "^4.0.0-rc.12",
     "most": "^1.7.3",
     "red-rings": "^2.0.0",
-    "red-rings-couchdb": "^3.7.0",
+    "red-rings-couchdb": "^3.7.1",
     "tangible": "^3.0.0"
   },
   "devDependencies": {
